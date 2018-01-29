@@ -1,0 +1,25 @@
+<html>
+    <head>
+            <script
+            src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"></script>
+       <script src="js/main.js"></script>
+    </head>
+    <h1>Add Rock Band</h1>
+    <% if(errors){%>
+        <% errors.forEach(function(error){ %>
+            <li><%= error.msg %></li>
+       <% }) %>
+    <%}%>
+    <form method="POST" action="/band/add">
+        <input type="text" name="name">
+
+        <input type="submit" value="add">
+    </form>
+    <h1><%=title %></h1>
+    <h1><%=persons %></h1>
+    <% persons.forEach(function(person){ %>
+        <li><%= person.name %> - <a  data-id="<%= person._id %>" class="delete_user" href="#">Delete</a></li>
+   <% }) %>
+</html>
