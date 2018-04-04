@@ -14,7 +14,6 @@ var app = express();
 // var logger = function(res, res, next){
 //     console.log('Logging...');
 //     next();
-
 // }
 
 // app.use(logger);
